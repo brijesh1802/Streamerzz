@@ -1,5 +1,7 @@
+import { RiCloseFill, RiMenu3Line } from '@remixicon/react'
 import React from 'react'
 import { useState } from 'react'
+import logo from "../assets/logo.png"
 
 const NavBar = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -27,11 +29,31 @@ const NavBar = () => {
         </div>
 
         <div className='md:hidden'>
-            <button onClick={toggleMenu} className='text-white focus:outline-none'aria-label={isOpen? "Close Menu" : "Open Menu"}>
-                {isOpen ? "Open" : "Close"}
+            <button onClick={toggleMenu} className='text-white focus:outline-none' aria-label={isOpen? "Close Menu" : "Open Menu"}>
+                {isOpen ? <RiCloseFill/> : <RiMenu3Line/>}
             </button>
         </div>
         </div>
+
+        {isOpen &&(
+            <div className="md:hidden bg-neutral-900/60 backdrop-blur-md border border-neutral-800 p-4 rounded-xl mt-2">
+                <div className='flex flex-col space-y-4'>
+                    <a href="#" className='hover:text-neutral-200'>
+                        Product
+                    </a>
+                    <a href="#" className='hover:text-neutral-200'>
+                        Pricing
+                    </a>
+                    <a href="#" className='hover:text-neutral-200'>
+                        Resources
+                    </a>
+                    <a href="#" className='hover:text-white'>
+                        Login
+                    </a>
+                </div>
+            </div>
+
+        )}
     </nav>
   )
 }
