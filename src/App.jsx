@@ -4,6 +4,8 @@ import HeroSection from './components/HeroSection'
 import HowitWorks from './components/HowitWorks'
 import KeyFeatures from './components/KeyFeatures'
 import PricingPlans from './components/PricingPlans'
+import Testimonials from './components/Testimonials'
+import Footer from './components/Footer'
 
 const App = () => {
   return (
@@ -13,6 +15,8 @@ const App = () => {
          <HowitWorks/>
          <KeyFeatures/>
          <PricingPlans/>
+         <Testimonials/>
+         <Footer/>
     </main>
 
   )
