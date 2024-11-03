@@ -3,6 +3,7 @@ import NavBar from './components/NavBar'
 import HeroSection from './components/HeroSection'
 import HowitWorks from './components/HowitWorks'
 import KeyFeatures from './components/KeyFeatures'
+import PricingPlans from './components/PricingPlans'
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
          <HeroSection/>  
          <HowitWorks/>
          <KeyFeatures/>
+         <PricingPlans/>
     </main>
 
   )
